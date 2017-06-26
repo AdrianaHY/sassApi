@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.row::before, .row::after {
+  content: " ";
+  display: table; }
+
+.row::after {
+  clear: both; }
+
+.categorias {
+  width: 24.99%;
+  background: pink; }
+
+/*# sourceMappingURL=style.css.map */
