@@ -33,18 +33,26 @@ header{
   background: $labGray;
   list-style: none;
   color:$white;
-  margin-top:$margin-top;
+  margin-top:$margin;
   padding: $padding;
   // @extend .contenedor-categorias
+&.categorias:hover{
+  background: $labYellow;
+}
 }
 .categoriaDos{
-  background:$labYellow;
-  color:$white;
-  padding: $padding;
-  margin-top: $margin-top;
+  background: $labGray;
+  @media (min-width: $break-small) {
+    background: $labYellow;
+    }
+  @media (min-width: $break-medium) {
+    background: $labYellow;
+    }
 }
+
 .contenedor-lista{
-  margin-top: $margin-top;
+  margin-top: $margin;
+  margin-bottom: $margin;
   @media (min-width: $break-small) {
     @include grid (12);
     }
@@ -63,7 +71,8 @@ header{
   color: $white;
   text-align: $text-align;
   padding: $padding;
-  margin-top: $margin-top;
+  margin-top: $margin;
+  font-size: $font-text;
   @media (min-width: $break-small) {
     @include grid (12);
     }

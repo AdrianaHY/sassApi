@@ -6,14 +6,14 @@
 header {
   background: #f7b617;
   color: #fff;
-  padding: 2vh; }
+  padding: 4vh; }
 
 .container {
   width: 100%;
   margin: 0 auto; }
 
 .contenedor-categorias {
-  padding: 2vh; }
+  padding: 4vh; }
   @media (min-width: 320px) {
     .contenedor-categorias {
       width: 99.996%;
@@ -32,16 +32,22 @@ header {
   list-style: none;
   color: #fff;
   margin-top: 2vh;
-  padding: 2vh; }
+  padding: 4vh; }
+  .categorias.categorias:hover {
+    background: #f7b617; }
 
 .categoriaDos {
-  background: #f7b617;
-  color: #fff;
-  padding: 2vh;
-  margin-top: 2vh; }
+  background: #2b2b2b; }
+  @media (min-width: 320px) {
+    .categoriaDos {
+      background: #f7b617; } }
+  @media (min-width: 767px) {
+    .categoriaDos {
+      background: #f7b617; } }
 
 .contenedor-lista {
-  margin-top: 2vh; }
+  margin-top: 2vh;
+  margin-bottom: 2vh; }
   @media (min-width: 320px) {
     .contenedor-lista {
       width: 99.996%;
@@ -61,8 +67,9 @@ header {
   background: #2b2b2b;
   color: #fff;
   text-align: center;
-  padding: 2vh;
-  margin-top: 2vh; }
+  padding: 4vh;
+  margin-top: 2vh;
+  font-size: 2vh; }
   @media (min-width: 320px) {
     .aside {
       width: 99.996%;
@@ -76,10 +83,10 @@ header {
       width: 24.999%;
       float: left; } }
   .aside h2 {
-    font-size: 4vh; }
+    font-size: 3vh; }
 
 .footer {
-  padding: 2vh;
+  padding: 4vh;
   background: #2b2b2b;
   color: #fff;
   text-align: center;
