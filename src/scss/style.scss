@@ -1,27 +1,86 @@
-$labYellow: rgb(247, 182, 23);
-$labGray: rgb(43, 43, 43);
+@import "variables";
+@import "mixin";
 
-$column:8.33%;
-
-@mixin grid ($columns) {
-  width: $column*($columns);
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+header{
+  background: $labYellow;
+  color:$white;
+  padding: $padding;
 }
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
-.row::before, .row::after {
-  content: " ";
-  display: table;
+.contenedor-categorias{
+  padding: $padding;
+  // margin-top:$margin-top;
+  @media (min-width: $break-small) {
+    @include grid (12);
+    }
+  @media (min-width: $break-medium) {
+    @include grid (4);
+    }
+  @media (min-width: $break-large) {
+    @include grid (3);
+    }
 }
-.row::after {
-  clear: both;
-}
-
 .categorias{
-  @include grid(3);
-  background: pink;
+  background: $labGray;
+  list-style: none;
+  color:$white;
+  margin-top:$margin-top;
+  padding: $padding;
+  // @extend .contenedor-categorias
+}
+.categoriaDos{
+  background:$labYellow;
+  color:$white;
+  padding: $padding;
+  margin-top: $margin-top;
+}
+.contenedor-lista{
+  margin-top: $margin-top;
+  @media (min-width: $break-small) {
+    @include grid (12);
+    }
+  @media (min-width: $break-medium) {
+    @include grid (8);
+    }
+  @media (min-width: $break-large) {
+    @include grid (6);
+  }& #lista-alumnas{
+    list-style: none;
+  }
+}
 
+.aside{
+  background: $labGray;
+  color: $white;
+  text-align: $text-align;
+  padding: $padding;
+  margin-top: $margin-top;
+  @media (min-width: $break-small) {
+    @include grid (12);
+    }
+  @media (min-width: $break-medium) {
+    @include grid (12);
+    }
+  @media (min-width: $break-large) {
+    @include grid (3);
+  }& h2{
+    font-size: $font-title;
+  }
+}
+
+.footer{
+  padding: $padding;
+  background: $labGray;
+  color: $white;
+  text-align: $text-align;
+  @include grid (12);
 }
